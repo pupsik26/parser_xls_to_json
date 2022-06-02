@@ -16,7 +16,7 @@ def parser(files_name):
                 for j in range(0, sh.ncols):
                     array_json[sh.cell_value(0, j)] = sh.cell_value(i, j)
                 all_array.append(array_json)
-            with open(file_name + "_" + point_sheets[wb_len] + ".json", "w", encoding="windows-1251") as writeJsonfile:
+            with open("json_file/" + file_name + "_" + point_sheets[wb_len] + ".json", "w", encoding="windows-1251") as writeJsonfile:
                 json.dump(all_array, writeJsonfile, indent=4, default=str)
 
 
